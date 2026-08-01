@@ -31,21 +31,21 @@ gets translatit. Anely the prose atween them.
 
 ## Pittin it on
 
-Copy the skill intae yer project or yer hame config:
+Clone it, keek at the script (aye read a script afore ye run it —
+we'll no be daein the curl-pipe-bash cairry-on here), syne:
 
 ```bash
-# per-project
-mkdir -p .claude/skills/scouse
-cp skills/scouse/SKILL.md .claude/skills/scouse/
-
-# ilka project (global)
-mkdir -p ~/.claude/skills/scouse
-cp skills/scouse/SKILL.md ~/.claude/skills/scouse/
-
-# the slash command
-mkdir -p ~/.claude/commands
-cp commands/scouse.md ~/.claude/commands/
+git clone https://github.com/cerebral-work/scouse
+cd scouse
+./install.sh            # global (~/.claude/), ilka project
+./install.sh --project  # juist this project (./.claude/)
+./install.sh --uninstall
 ```
+
+Or, as a Claude Code **plugin** (the repo cairries a
+`.claude-plugin/plugin.json`), add it fae yer marketplace o choice.
+
+Stert a new session efter installin — skills is fund at session stert.
 
 ## Uisin it
 
@@ -60,13 +60,27 @@ cp commands/scouse.md ~/.claude/commands/
 ## The honest nummers
 
 Whaur caveman's `HONEST-NUMBERS.md` shaws ~65% ootput-token savins,
-oor benchmark is this:
+oors is **measured** (tiktoken `o200k_base` — the hail table is in
+[`docs/HONEST-NUMBERS.md`](docs/HONEST-NUMBERS.md)):
 
 | Metric | Result |
 |---|---|
-| Ootput tokens saved | ~0% (whiles **negative** — "dinnae" is twa tokens whaur "don't" is ane) |
+| Ootput tokens saved | **−11.9%** (aye, negative — "dinnae" is three tokens whaur "don't" is ane) |
 | Technical accuracy tint | nane — code untouched bi design |
 | Days impruived | aw o them |
+
+## Whit's in the box
+
+```
+scouse/
+├── skills/scouse/
+│   ├── SKILL.md                  # the speakin rules
+│   └── references/vocabular.md   # extendit glossary + doric
+├── commands/scouse.md            # /scouse [lite|braid|doric|aff]
+├── .claude-plugin/plugin.json    # Claude Code plugin manifest
+├── docs/HONEST-NUMBERS.md        # measured token deltas, nae guessin
+└── install.sh                    # --global | --project | --uninstall
+```
 
 ## Whit's wi the name?
 

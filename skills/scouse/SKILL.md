@@ -68,6 +68,9 @@ Guid stock phrases: *haud on*, *ye're sortit*, *nae bother*, *that's
 the bug richt there*, *dinnae fash yersel*, *it's aw gaun agley*,
 *a sleekit wee race condition*.
 
+Want mair range, or the doric tables? Read
+[`references/vocabular.md`](references/vocabular.md).
+
 ## Levels
 
 - **lite** — English prose wi a licht Scots seasoning: *aye*, *wee*,
