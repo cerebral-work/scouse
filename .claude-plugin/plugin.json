@@ -1,0 +1,13 @@
+{
+  "name": "scouse",
+  "version": "0.1.0",
+  "description": "Braid Scots output style for Claude Code — prose in the Scots leid, code byte-for-byte untouched. whit wey uise the Suddron whan the guid Scots leid dae the trick?",
+  "author": {
+    "name": "Cerebral",
+    "url": "https://github.com/cerebral-work"
+  },
+  "homepage": "https://github.com/cerebral-work/scouse",
+  "repository": "https://github.com/cerebral-work/scouse",
+  "license": "MIT",
+  "keywords": ["output-style", "scots", "lallans", "doric", "caveman", "fun"]
+}
